@@ -1,0 +1,193 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.main-header{
+    width: 100%;
+    height: 3.5rem;
+    background-color: #dbc441;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+}
+.main-header__nav {
+    height: 100%;
+    width: 100%;
+    display: none;
+    display: flex;
+    align-items: center;
+}
+.main-header__item-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.main-header__item{
+    margin: 0 1rem;
+    padding: 0;
+}
+.main-header__item a,
+.main-header__item button {
+  font: inherit;
+  background: transparent;
+  border: none;
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+
+
+
+.main-header__item a:hover,
+.main-header__item a:active,
+.main-header__item a.active{
+    color: #6200ff;
+}
+
+.form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+}
+
+.form-control {
+    margin: 1rem 0;
+}
+
+.form-input-text{
+    margin: 1rem 0;
+}
+
+.form-control label,
+.form-control input {
+    display: block;
+    width: 100%;
+}
+
+.form-control input {
+    border: 1px solid #dbc441;
+    font: inherit;
+    border-radius: 2px;
+}
+
+button {
+    font: inherit;
+    border: 1px solid #6200ff;
+    color: #6200ff;
+    background: white;
+    border-radius: 3px;
+}
+
+.main-content {
+    display: block;
+    width: 50rem;
+    max-width: 80%;
+    margin: auto;
+}
+
+.main-title{
+    margin-top: 5rem;
+    display: flex;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #dbc441;
+}
+
+.main-title label {
+    font: inherit;
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.add-url{
+    text-decoration: none;
+    padding: 5px 5px 5px 5px;
+    font-size: 1rem;
+    color: white;
+    text-align: right;
+    margin-left: auto;
+    border: 3px solid #dbc441;
+    background-color: #dbc441 ;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.content{
+    width: 20rem;
+    height: 20rem;
+    margin: auto;
+    margin-bottom: 6rem;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    margin-top: 1rem;
+}
+
+
+.card-content {
+  padding: 2px 16px;
+  display: flex;
+  align-items: center;
+}
+
+.heart-btn{
+    position: relative;
+    width: 25px;
+    height: 25px;
+    margin-right: 15px;
+}
+
+.heart-btn img{
+    max-width: 25px;
+    max-height: 25px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 25px;
+    transition: all 0.3s ease-in;
+    width: 25px;
+}
+
+.heart-btn .img-fill{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.heart-btn .img-unfill{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+
+.heart-btn.active .img-fill{
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+
+.heart-btn.active .img-unfill{
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+}
+
+.logout-btn li form button{
+    border: none;
+    color: white;
+    background-color: #dbc441;
+    font-family: inherit;
+}
+
+.user-message{
+    margin: auto;
+    width: 20%;
+    border: 1px solid #dbc441;
+    padding: 1rem;
+    border-radius: 3px;
+    text-align: center;
+}

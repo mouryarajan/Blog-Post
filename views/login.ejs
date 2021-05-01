@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= pageTitle %>
+    </title>
+    <link rel="stylesheet" href="/style/structure.css">
+    <link rel="stylesheet" href="/style/main.css">
+</head>
+
+<body>
+    <div class="row">
+        <header class="main-header">
+            <nav class="main-header__nav">
+                <ul class="main-header__item-list">
+                    <li class="main-header__item"><a href='/register'>Register</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <main>
+        <% if (errorMessage) { %>
+        <div class="user-message"><%= errorMessage %></div>
+        <% } %>
+        <form class="form" action="/login" method="POST">
+            <div class="form-control">
+                <div class="form-input-text">
+                    <lable for="txtEmailId">Email Id</lable>
+                    <input type="text" name="txtEmailId" id="txtEmailId">
+                </div>
+                <div class="form-input-text">
+                    <lable for="txtUserPassword">Password</lable>
+                    <input type="password" name="txtUserPassword" id="txtUserPassword">
+                </div>
+            </div>
+            <button type="submit">Login</button>
+        </form>
+    </main>
+</body>
+
+</html>

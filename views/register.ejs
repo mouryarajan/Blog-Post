@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= pageTitle %>
+    </title>
+    <link rel="stylesheet" href="/style/structure.css">
+    <link rel="stylesheet" href="/style/main.css">
+</head>
+
+<body>
+    <div class="row">
+        <header class="main-header">
+            <nav class="main-header__nav">
+                <ul class="main-header__item-list">
+                    <li class="main-header__item"><a href='/login'>login</a></li>
+                </ul>
+            </nav>
+        </header>
+    </div>
+    <main>
+        <% if (errorMessage) { %>
+            <div class="user-message"><%= errorMessage %></div>
+            <% } %>
+        <form class="form" action="/register" method="POST" novalidate>
+            <div class="form-control">
+                <div class="form-input-text">
+                    <lable for="txtUserName">Full Name</lable>
+                    <input type="text" name="txtUserName" id="txtUserName" required>
+                </div>
+                <div class="form-input-text">
+                    <lable for="txtEmailId">Email Id</lable>
+                    <input type="email" name="txtEmailId" id="txtEmailId" required>
+                </div>
+                <div class="form-input-text">
+                    <lable for="txtUserPassword">Password</lable>
+                    <input type="password" name="txtUserPassword" id="txtUserPassword" required>
+                </div>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </main>
+</body>
+
+</html>

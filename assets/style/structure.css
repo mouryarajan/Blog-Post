@@ -1,0 +1,65 @@
+.row
+{
+	width:100%;
+	clear:both;
+}
+.col-md-12
+{
+	width:100%;
+	float:left;
+}
+.col-md-11
+{
+	width:91.67%;
+	float:left;
+}
+.col-md-10
+{
+	width:83.33%;
+	float:left;
+}
+.col-md-9
+{
+	width:75%;
+	float:left;
+}
+.col-md-8
+{
+	width:66.67%;
+	float:left;
+}
+.col-md-7
+{
+	width:58.33%;
+	float:left;
+}
+.col-md-6
+{
+	width:50%;
+	float:left;
+}
+.col-md-5
+{
+	width:41.67%;
+	float:left;
+}
+.col-md-4
+{
+	width:33.33%;
+	float:left;
+}
+.col-md-3
+{
+	width:25%;
+	float:left;
+}
+.col-md-2
+{
+	width:16.67%;
+	float:left;
+}
+.col-md-1
+{
+	width:8.33%;
+	float:left;
+}

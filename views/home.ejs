@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <%= pageTitle %>
+    </title>
+    <link rel="stylesheet" href="/style/structure.css">
+    <link rel="stylesheet" href="/style/main.css">
+</head>
+
+<body>
+    <%- include('includes/header.ejs') %>
+        <main>
+            <div class="main-content">
+                <div class="main-title">
+                    <label>Images</label>
+                </div>
+                <div class="row">
+                    <% for(let post of data) {%>
+                        <div class="col-md-6">
+                            <div class="content">
+                                <div class="card">
+                                    <div class="container card-content">
+                                        <p>
+                                            <%= post.title %>, uploaded by <%= post.name %>
+                                        </p>
+                                    </div>
+                                    <img src="/images/<%=post.imageUrl %>" alt="Avatar"
+                                        style="height: 300px; width: 100%;">
+                                    <div class="container card-content">
+                                        <div class="heart-btn">
+                                            <% if(post.isLike==true) { %>
+                                                <a href="/unlike/home/<%=post.id%>"><img src="/images/heart-black.png"
+                                                        alt="Avatar"></a>
+                                                <% } else {%>
+                                                    <a href="/like/home/<%=post.id%>"><img src="/images/heart.png"
+                                                            alt="Avatar"></a>
+                                                    <% } %>
+                                        </div>
+                                        <p>
+                                            <%= post.likes %> Likes
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <% } %>
+                </div>
+            </div>
+        </main>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="/js/heart.js"></script>
+
+</html>
